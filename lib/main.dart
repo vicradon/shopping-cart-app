@@ -1,5 +1,5 @@
-import 'package:coursefidence/pages/checkout.dart';
-import 'package:coursefidence/pages/items_list.dart';
+import 'package:shopping_cart_app/pages/checkout.dart';
+import 'package:shopping_cart_app/pages/items_list.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(App());
@@ -26,19 +26,28 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (BuildContext context) => ItemsList(),
-        '/checkout':(BuildContext context) => Checkout()
+        '/checkout': (BuildContext context) => Checkout()
       },
     );
   }
 }
 
-class ShoppingCartApp extends StatefulWidget {
-  @override
-  ShoppingCartAppState createState() => ShoppingCartAppState();
-}
+// class ShoppingCartApp extends StatefulWidget {
+//   @override
+//   ShoppingCartAppState createState() => ShoppingCartAppState();
+// }
 
-class ShoppingCartAppState extends State<ShoppingCartApp> {
-  Widget build(BuildContext context) {
-    return ItemsList();
-  }
-}
+// class ShoppingCartAppState extends State<ShoppingCartApp> {
+//   Widget build(BuildContext context) {
+//     return StreamBuilder(
+//       builder: (context, snapshot) {
+//         return RaisedButton(
+//           onPressed: () {
+//             print(snapshot.data);
+//           },
+//           child: Text("Press me"),
+//         );
+//       },
+//     );
+//   }
+// }

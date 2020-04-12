@@ -1,20 +1,33 @@
 import 'dart:async';
 
-import 'package:coursefidence/bloc/base.dart';
-import 'package:coursefidence/bloc/cart_items_provider.dart';
+class CartItemsBloc {
+  final cartStreamController = StreamController();
 
-class CartItemsBloc implements Bloc {
-  final streamCartController = StreamController(); // create a StreamController
-  final CartItemsProvider provider = CartItemsProvider(); // create an instance of our CounterProvider
+  Stream get getStream => cartStreamController.stream;
 
-  Stream get getCount => streamCartController.stream; // create a getter for our stream
+  Map allItems = {
+    'shop items': [
+      {'name': 'App dev kit', 'price': 20, 'id': 1},
+      {'name': 'App consultation', 'price': 100, 'id': 2},
+      {'name': 'Logo Design', 'price': 10, 'id': 3},
+      {'name': 'Code review', 'price': 90, 'id': 4},
+    ],
+    'cart items': []
+  };
 
-  void updateCart(item) {
-    provider.addToCart(item); // call the method to increase our count in the provider
-    streamCartController.sink.add(provider.shopItems); // add the count to our sink
+  void addToCart(item) {
+    allItems['shop items'].remove(item);
+    allItems['cart items'].add(item);
+    cartStreamController.sink.add(allItems);
+  }
+
+  void removeFromCart(item) {
+    allItems['cart items'].remove(item);
+    allItems['shop items'].add(item);
+    cartStreamController.sink.add(allItems);
   }
 
   void dispose() {
-    streamCartController.close(); // close our StreamController
+    cartStreamController.close(); // close our StreamController
   }
 }

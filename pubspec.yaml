@@ -1,5 +1,5 @@
-name: coursefidence
-description: A flutter app where students log their confindence level in their courses
+name: shopping_cart_app
+description: A shopping cart app which uses BLoC pattern for state management 
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43

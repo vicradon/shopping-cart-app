@@ -1,7 +1,6 @@
-# Coursefidence
+# ShoppingCartApp
 
-Coursefidence is a flutter app which logs the confidence level of students in their courses. 
-It can be useful to students who don't give equal attention to all courses.
+A shopping cart app using BLoC pattern for state management
 
 ## Installation
 
@@ -25,7 +24,7 @@ OR
 2. Copy the content of the lib folder and pubspec.yaml into your existing project
 
 ## Usage
-Play around with the code in your fav emulator
+Play around with the code in your favorite emulator
 
 
 ## Contributing
@@ -34,4 +33,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](/LICENCE)
