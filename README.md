@@ -2,6 +2,13 @@
 
 Shopping cart app is an app which illustrates how the BloC pattern can be used to build reactive apps.
 
+## Preview
+<center>
+
+![Shopping Cart App Demo](./assets/shopping_cart_app.gif)
+
+</center>
+
 ## Installation
 
 Clone or download the project
@@ -24,13 +31,12 @@ OR
 2. Copy the content of the lib folder and pubspec.yaml into your existing project
 
 ## Usage
-Play around with the code in your favorite emulator
+Play around with the code in your favorite emulator. You can read my tutorial on how to build this app on [dev](https://dev.to/vicradon)
 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
