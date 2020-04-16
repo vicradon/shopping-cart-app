@@ -1,7 +1,7 @@
 import 'dart:async';
 
 class CartItemsBloc {
-  final cartStreamController = StreamController();
+  final cartStreamController = StreamController.broadcast();
 
   Stream get getStream => cartStreamController.stream;
 
@@ -31,3 +31,5 @@ class CartItemsBloc {
     cartStreamController.close(); // close our StreamController
   }
 }
+
+final bloc = CartItemsBloc();

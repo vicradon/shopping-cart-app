@@ -20,23 +20,28 @@ class ItemsList extends StatelessWidget {
 
 class ItemsListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
-    final bloc = CartItemsBloc();
     return StreamBuilder(
-      stream: bloc.getStream,
       initialData: bloc.allItems,
+      stream: bloc.getStream,
       builder: (context, snapshot) {
-        return ListView(
-          children: <Widget>[
-            ListTile(
-              title: Text("App dev kit"),
-              subtitle: Text("\$20"),
-              trailing: Icon(Icons.add_shopping_cart),
+        return snapshot.data["shop items"].length > 0 ? ListView.builder(
+          itemCount: snapshot.data["shop items"].length,
+          itemBuilder: (BuildContext context, i) {
+            final shopList = snapshot.data["shop items"];
+            return ListTile(
+              title: Text(shopList[i]['name']),
+              subtitle: Text("\$${shopList[i]['price']}"),
+              trailing: IconButton(
+                icon: Icon(Icons.add_shopping_cart),
+                onPressed: () {
+                  bloc.addToCart(shopList[i]);
+                },
+              ),
               onTap: () {
-                print(snapshot.data);
               },
-            )
-          ],
-        );
+            );
+          },
+        ): Center(child:Text("All items in shop have been taken"));
       },
     );
   }
