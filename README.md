@@ -1,7 +1,6 @@
 # Coursefidence
 
-Coursefidence is a flutter app which logs the confidence level of students in their courses. 
-It can be useful to students who don't give equal attention to all courses.
+Shopping cart app is an app which illustrates how the BloC pattern can be used to build reactive apps.
 
 ## Installation
 
@@ -10,7 +9,7 @@ Clone or download the project
 ### Cloning
 
 ```bash
-git clone https://github.com/vicradon/coursefidence.git
+git clone https://github.com/Vicradon/shoping-cart-app.git
 flutter run
 ```
 ### Downloading
