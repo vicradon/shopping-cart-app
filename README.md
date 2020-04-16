@@ -1,4 +1,4 @@
-# Coursefidence
+# Shopping-Cart-App
 
 Shopping cart app is an app which illustrates how the BloC pattern can be used to build reactive apps.
 
