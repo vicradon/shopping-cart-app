@@ -1,6 +1,6 @@
-# ShoppingCartApp
+# Shopping-Cart-App
 
-A shopping cart app using BLoC pattern for state management
+Shopping cart app is an app which illustrates how the BloC pattern can be used to build reactive apps.
 
 ## Installation
 
@@ -9,7 +9,7 @@ Clone or download the project
 ### Cloning
 
 ```bash
-git clone https://github.com/vicradon/coursefidence.git
+git clone https://github.com/Vicradon/shoping-cart-app.git
 flutter run
 ```
 ### Downloading
@@ -33,4 +33,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](/LICENCE)
+[MIT](https://choosealicense.com/licenses/mit/)
