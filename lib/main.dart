@@ -20,6 +20,7 @@ class App extends StatelessWidget {
       900: Color.fromRGBO(255, 144, 0, 1),
     };
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: MaterialColor(0xFFFF7000, color),
       ),
